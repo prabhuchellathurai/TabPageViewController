@@ -357,7 +357,7 @@ extension TabPageViewController: UIPageViewControllerDelegate {
 
 extension TabPageViewController: UIScrollViewDelegate {
 
-    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    open func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.x == defaultContentOffsetX || !shouldScrollCurrentBar {
             return
         }
@@ -380,7 +380,7 @@ extension TabPageViewController: UIScrollViewDelegate {
         tabView.scrollCurrentBarView(index, contentOffsetX: scrollOffsetX)
     }
 
-    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    open func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         tabView.updateCurrentIndex(beforeIndex, shouldScroll: true)
     }
 }
